@@ -47,7 +47,7 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     
     @objc public var noResponse = true
     
-    func saveRequest(_ request: URLRequest) {
+    public func saveRequest(_ request: URLRequest) {
         requestDate = Date()
         requestTime = getTimeFromDate(requestDate!)
         requestURL = request.getNFXURL()
@@ -73,7 +73,7 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
         responseDate = Date()
     }
     
-    func saveResponse(_ response: URLResponse, data: Data) {
+   public func saveResponse(_ response: URLResponse, data: Data) {
         noResponse = false
         responseDate = Date()
         responseTime = getTimeFromDate(responseDate!)
