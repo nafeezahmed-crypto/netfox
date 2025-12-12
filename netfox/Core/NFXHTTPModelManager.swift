@@ -10,7 +10,7 @@ import Foundation
 
 public final class NFXHTTPModelManager: NSObject {
     
-    static let shared = NFXHTTPModelManager()
+    public static let shared = NFXHTTPModelManager()
     
     let publisher = Publisher<[NFXHTTPModel]>()
        
