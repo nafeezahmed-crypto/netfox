@@ -8,7 +8,7 @@
 import Foundation
 
 
-final class NFXHTTPModelManager: NSObject {
+public final class NFXHTTPModelManager: NSObject {
     
     static let shared = NFXHTTPModelManager()
     
