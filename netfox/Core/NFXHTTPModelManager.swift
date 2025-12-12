@@ -35,7 +35,7 @@ public final class NFXHTTPModelManager: NSObject {
     }
     
     /// Thread safe
-    func add(_ obj: NFXHTTPModel) {
+    public func add(_ obj: NFXHTTPModel) {
         DispatchQueue.main.async {
             self.models.insert(obj, at: 0)
         }
