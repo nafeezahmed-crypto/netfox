@@ -57,11 +57,11 @@ class NFXDetailsController: NFXGenericController {
         }
         tempString += "[Request date] \n\(object.requestDate!)\n\n"
         if !(object.noResponse) {
-            tempString += "[Response date] \n\(object.responseDate!)\n\n"
-            tempString += "[Time interval] \n\(object.timeInterval!)\n\n"
+            tempString += "[Response date] \n\(object.responseDate ?? Date())\n\n"
+            tempString += "[Time interval] \n\(object.timeInterval ?? 0.0)\n\n"
         }
-        tempString += "[Timeout] \n\(object.requestTimeout!)\n\n"
-        tempString += "[Cache policy] \n\(object.requestCachePolicy!)\n\n"
+        tempString += "[Timeout] \n\(object.requestTimeout ?? "")\n\n"
+        tempString += "[Cache policy] \n\(object.requestCachePolicy ?? "")\n\n"
         
         return formatNFXString(tempString)
     }
